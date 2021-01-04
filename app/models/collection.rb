@@ -1,3 +1,3 @@
 class Collection < ApplicationRecord
-    has_many :photos
+    has_many :artworks
 end
