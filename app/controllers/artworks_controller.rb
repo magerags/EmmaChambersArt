@@ -1,12 +1,12 @@
 class ArtworksController < ApplicationController
     before_action :authenticate_user!, except: [:index, :show]
+    before_action :set_artwork, only: [:show, :edit]
     
     def index
       @artworks = Artwork.all
     end
 
     def show
-      @artwork = Artwork.find(params[:id])
     end
 
     def new
@@ -14,7 +14,6 @@ class ArtworksController < ApplicationController
     end
 
     def edit
-      @artwork = Artwork.find(params[:id])
     end 
 
     def create
@@ -36,5 +35,9 @@ class ArtworksController < ApplicationController
 
     def artwork_params
       params.require(:artwork).permit(:name, :description, :type, :size, :collection_id, :photo)
+    end
+
+    def set_artwork
+      @artwork = Artwork.find(params[:id])
     end
 end

@@ -1,16 +1,15 @@
 class CollectionsController < ApplicationController
     before_action :authenticate_user!, except: [:index, :show]
+    before_action :set_collection, only: [:show, :edit]
 
     def index
       @collections = Collection.all
     end
 
     def show
-      @collection = Collection.find(params[:id])
     end
 
     def edit
-      @collection = Collection.find(params[:id])
     end
 
     def new
@@ -36,5 +35,9 @@ class CollectionsController < ApplicationController
 
     def collection_params
       params.require(:collection).permit(:name, :description)
+    end
+
+    def set_collection
+      @collection = Collection.find(params[:id])
     end
 end
