@@ -1,0 +1,17 @@
+<h1>All artwork</h1>
+<br>
+<br>
+<%= link_to "new artwork", new_artwork_path %>
+<br>
+<%= link_to "new collection", new_collection_path %>
+<br>
+<br>
+<br>
+<% @artworks.each do |art| %>
+<%= art.name %>
+<br>
+<%= cl_image_tag art.photo.key, height: 400 if art.photo.attached? %>
+<br>
+<br>
+<br>
+<% end %>
