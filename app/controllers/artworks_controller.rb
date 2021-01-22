@@ -1,6 +1,6 @@
 class ArtworksController < ApplicationController
     before_action :authenticate_user!, except: [:index, :show]
-    before_action :set_artwork, only: [:show, :edit]
+    before_action :set_artwork, only: [:show, :edit, :update, :destroy]
     
     def index
       @artworks = Artwork.all
@@ -15,6 +15,11 @@ class ArtworksController < ApplicationController
 
     def edit
     end 
+
+    def update
+      @artwork.update(artwork_params)
+      redirect_to artworks_path
+    end
 
     def create
       @artwork = Artwork.new(artwork_params)

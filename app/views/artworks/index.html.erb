@@ -14,6 +14,12 @@
 <br>
 <%= art.collection.name %>
 <br>
+<%= link_to edit_artwork_path(art.id) do %>
+<button class="btn btn-primary mx-1">edit</button>
+<% end %>
 <br>
+<%= link_to artwork_path(art.id), method: :delete, data: { confirm: 'Are you sure?'} do %>
+<button class="btn btn-primary mx-1">delete</button>
+<% end %>
 <% end %>
 <br>
