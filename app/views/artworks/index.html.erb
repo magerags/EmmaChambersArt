@@ -1,25 +1,31 @@
+<div class="wrapper">
 <h1>All artwork</h1>
-<br>
-<br>
+
+
 <%= link_to "new artwork", new_artwork_path %>
 <br>
 <%= link_to "new collection", new_collection_path %>
+
 <br>
 <br>
-<br>
+
 <% @artworks.each do |art| %>
+<div class="indexCard">
+
+<%= cl_image_tag art.photo.key, height: 400 if art.photo.attached? %>
+
 <%= art.name %>
 <br>
-<%= cl_image_tag art.photo.key, height: 400 if art.photo.attached? %>
-<br>
 <%= art.collection.name %>
-<br>
+
 <%= link_to edit_artwork_path(art.id) do %>
 <button class="btn btn-primary mx-1">edit</button>
 <% end %>
-<br>
+
 <%= link_to artwork_path(art.id), method: :delete, data: { confirm: 'Are you sure?'} do %>
 <button class="btn btn-primary mx-1">delete</button>
 <% end %>
+</div>
 <% end %>
-<br>
+
+</div>
