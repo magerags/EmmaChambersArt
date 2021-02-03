@@ -1,1 +1,9 @@
+<div class="wrapper">
 <h1>All collections</h1>
+
+<% @collections.each do |coll| %>
+<%= coll.name %>
+<br>
+<% end %>
+</div>
+
