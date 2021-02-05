@@ -1,2 +1,11 @@
-<h1>hello</h1>
+<div class="wrapper">
 <%= @collection.name %>
+<% @collection.artworks.each do |art| %>
+<div class="indexCard">
+
+<%= cl_image_tag art.photo.key, height: 400 if art.photo.attached? %>
+
+<%= art.name %>
+</div>
+<% end %>
+</div>

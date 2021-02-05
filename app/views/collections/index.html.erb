@@ -1,9 +1,22 @@
 <div class="wrapper">
 <h1>All collections</h1>
+<br>
+<br>
+<br>
+
 
 <% @collections.each do |coll| %>
-<%= coll.name %>
+<div class="indexCard">
+<%= link_to coll.name, collection_path(coll.id) %>
 <br>
+<%= link_to edit_collection_path(coll.id) do %>
+<button class="btn btn-primary mx-1">edit</button>
+<% end %>
+
+<%= link_to collection_path(coll.id), method: :delete, data: { confirm: 'Are you sure?'} do %>
+<button class="btn btn-primary mx-1">delete</button>
+<% end %>
+</div>
 <% end %>
 </div>
 

@@ -1,6 +1,6 @@
 class CollectionsController < ApplicationController
     before_action :authenticate_user!, except: [:index, :show]
-    before_action :set_collection, only: [:show, :edit]
+    before_action :set_collection, only: [:show, :edit, :update, :destroy]
 
     def index
       @collections = Collection.all
@@ -9,11 +9,16 @@ class CollectionsController < ApplicationController
     def show
     end
 
+    def new
+      @collection = Collection.new
+    end
+    
     def edit
     end
 
-    def new
-      @collection = Collection.new
+    def update
+      @collection.update(collection_params)
+      redirect_to collections_path
     end
 
     def create
