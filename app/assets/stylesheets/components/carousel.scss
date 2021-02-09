@@ -1,14 +1,18 @@
 .carousel-item {
-  height: 820px;
   img {
-    height: 660px;
     object-fit: cover;
+    display: block;
+    max-height: 660px;
+    height: 58vw;
   }
+}
+
+.image-container {
 }
 
 .carousel-control-prev, .carousel-control-next {
   width: 4%!important;
-  bottom: 150px;
+  bottom: 120px;
 }
 
 .center {
@@ -18,7 +22,7 @@
 }
 
 .carousel-indicators {
-  bottom: 120px;
+  bottom: 70px;
 }
 
 .carousel-caption {
