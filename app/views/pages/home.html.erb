@@ -16,7 +16,7 @@
   <div class="carousel-inner">
   <% @artworks.each_with_index do |art,i|%>
   <div class="carousel-item <%= "active " if i==0 %>">
-    <%= cl_image_tag art.photo.key, height: 550, class: "center" if art.photo.attached? %>
+    <%= cl_image_tag art.photo.key, class: "center" if art.photo.attached? %>
      <div class="carousel-caption">
           <h5><%= art.name %></h5>
           <p><%= art.description %></p>

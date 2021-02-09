@@ -1,10 +1,14 @@
 .carousel-item {
-  height: 800px;
+  height: 820px;
+  img {
+    height: 660px;
+    object-fit: cover;
+  }
 }
 
 .carousel-control-prev, .carousel-control-next {
-  width: 5%!important;
-  bottom: 100px;
+  width: 4%!important;
+  bottom: 150px;
 }
 
 .center {
@@ -14,7 +18,7 @@
 }
 
 .carousel-indicators {
-  bottom: 70px;
+  bottom: 120px;
 }
 
 .carousel-caption {
@@ -23,5 +27,6 @@
   left: auto;
   right: auto;
   position: relative;
-  top: 10px;
+  top: 20px;
+  left: 20px;
 }
