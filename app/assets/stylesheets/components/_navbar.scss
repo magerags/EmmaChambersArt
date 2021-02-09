@@ -1,6 +1,25 @@
+.navbar {
+  padding: 20px 0px!important;
+  background: rgba(0, 0, 0, 0);
+  // border-bottom: 1.5px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 50px;
+
+  .nav-link {
+    font-size: 1.4rem;
+    margin-left: 25px;
+  }
+}
+
+.mr-auto {
+  margin-right: 0!important;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +28,17 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-toggler {
+  border-color: transparent!important;
+}
+
+.navbar-toggler:focus {
+  border-color: transparent!important;
+}
+
+button:focus {
+    border-color: transparent!important;
+    outline: none!important;
 }
