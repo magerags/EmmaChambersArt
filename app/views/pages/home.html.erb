@@ -13,8 +13,14 @@
     <%= cl_image_tag art.photo.key, class: "center" if art.photo.attached? %>
     </div>
      <div class="carousel-caption">
-          <h5><%= art.name %></h5>
-          <p><%= art.description %></p>
+          <h1><%= art.name %></h1>
+          <div class="subtitle">
+          <h2 class="subtitle"><%= art.medium %></h2>
+          <i class="fas fa-circle fa-xs"></i>
+          <h2 class="subtitle"><%= art.size %></h2>
+          </div>
+          <h3><%= art.description %></h3>
+
       </div>
   </div>
   <%end%>
@@ -28,20 +34,10 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
 <br>
 <br>
 <br>
 <br>
-<br>
-
-
-<h1>Under construction</h1>
-<p>This site is currently being built, please bear with us</p>
-<br>
-<br>
-<br>
-
 <%= link_to "Artworks", artworks_path %>
 <br>
 <br>

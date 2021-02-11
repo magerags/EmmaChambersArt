@@ -2,25 +2,40 @@
   font-size: 2.2rem;
   font-weight: 400;
   font-family: "Playfair Display";
-  color: rgba(40, 40, 40, 0.9)!important;
+  color: #006d77!important;
 
   @media (max-width: 991px) {
     font-size: 1.8rem!important;
   }
 }
 
+.subtitle {
+  display: flex;
+  margin-right: 10px;
+  color: rgba(140,140,140, 0.7);
+  font-size: 0.85rem;
+  margin-top: -2px;
 
+  i {
+    font-size: 0.5rem;
+    margin-bottom: -1px;
+    margin-right: 10px;
+    color: rgba(170,170,170, 0.4);
+  }
+}
 
 h1 {
-
+  color: rgba(29, 53, 87, 0.8);
+  font-size: 1.75rem;
 }
 
 h2 {
-
 }
 
 h3 {
-
+  color: rgba(80,80,80, 1);
+  margin-top: 10px;
+  font-size: 1.2rem;
 }
 
 h4 {
