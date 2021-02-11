@@ -1,4 +1,5 @@
 .carousel-item {
+  overflow: visible;
   img {
     object-fit: cover;
     display: block;
@@ -38,10 +39,11 @@
   right: auto;
   position: relative;
   top: 30px;
-  height: 200px;
+  min-height: 200px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  overflow-y: visible;
 }
 
 .align-right {
@@ -57,10 +59,15 @@
     color: rgb(60, 60, 60);
     cursor: pointer;
     text-decoration: none;
+    font-size: 1.3rem;
   }
   
   a:hover {
     text-decoration: none;
     color: #006d77!important;
   }
+}
+
+.left {
+  max-width: 600px;
 }
