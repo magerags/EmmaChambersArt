@@ -3,6 +3,10 @@
   font-weight: 400;
   font-family: "Playfair Display";
   color: rgba(40, 40, 40, 0.9)!important;
+
+  @media (max-width: 991px) {
+    font-size: 1.8rem!important;
+  }
 }
 
 
