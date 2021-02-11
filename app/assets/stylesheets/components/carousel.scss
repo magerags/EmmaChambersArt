@@ -19,7 +19,7 @@
 
 .carousel-control-prev, .carousel-control-next {
   width: 4%!important;
-  bottom: 180px;
+  bottom: 230px;
 }
 
 .center {
@@ -29,7 +29,7 @@
 }
 
 .carousel-indicators {
-  bottom: 160px;
+  bottom: 200px;
 }
 
 .carousel-caption {
@@ -39,7 +39,7 @@
   right: auto;
   position: relative;
   top: 30px;
-  min-height: 200px;
+  height: 240px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -51,7 +51,7 @@
   font-size: 0.9rem;
   color: rgba(140,140,140, 0.7)!important;
   position: relative;
-  top: 7px;
+  top: 6px;
 }
 
 .right {
@@ -60,6 +60,8 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 1.3rem;
+    position: relative;
+    bottom: 4px;
   }
   
   a:hover {
