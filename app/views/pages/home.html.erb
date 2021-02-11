@@ -13,6 +13,7 @@
     <%= cl_image_tag art.photo.key, class: "center" if art.photo.attached? %>
     </div>
      <div class="carousel-caption">
+        <div class="left">
           <h1><%= art.name %></h1>
           <div class="subtitle">
           <h2 class="subtitle"><%= art.medium %></h2>
@@ -20,7 +21,11 @@
           <h2 class="subtitle"><%= art.size %></h2>
           </div>
           <h3><%= art.description %></h3>
-
+        </div>
+        <div class="right">
+          <h2 class="align-right">Part of</h2>
+          <h4> <%= link_to art.collection.name, collection_path(art.collection) %> </h4>
+        </div>
       </div>
   </div>
   <%end%>
