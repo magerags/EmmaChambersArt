@@ -41,10 +41,11 @@
   height: 200px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .align-right {
-  text-align: right;
+  text-align: left;
   font-size: 0.9rem;
   color: rgba(140,140,140, 0.7)!important;
   position: relative;
@@ -53,13 +54,13 @@
 
 .right {
   a {
-    color: rgba(80,80,80, 1)!important;
+    color: rgb(60, 60, 60);
     cursor: pointer;
     text-decoration: none;
   }
   
   a:hover {
-    color: #006d77!important;
     text-decoration: none;
+    color: #006d77!important;
   }
 }

@@ -1,5 +1,8 @@
 .wrapper {
   margin: 20px 65px;
+  width: 90vw;
+  max-width: 1200px;
+  align-self: center;
 
   @media (max-width: 991px) {
     margin: 10px 15px;
