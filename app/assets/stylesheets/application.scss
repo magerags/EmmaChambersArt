@@ -13,7 +13,7 @@
 @import "pages/index";
 
 body {
-  background-color: #d8e2dc;
+  background-color: rgba($color: #d3d3d3, $alpha: 0.4);
   display: flex;
   justify-content: space-around;
 }
