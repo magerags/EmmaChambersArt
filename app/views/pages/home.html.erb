@@ -39,11 +39,9 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<br>
-<br>
-<br>
-<br>
+<% if user_signed_in? %>
 <%= link_to "Artworks", artworks_path %>
 <br>
 <br>
 <%= link_to "Collections", collections_path %>
+<% end %>
